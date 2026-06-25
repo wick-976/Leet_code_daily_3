@@ -1,3 +1,6 @@
+//Here we have to return o if the x reversed x value exceed the INT_MAX and also dont forgot to take the long long to X they passing.
+
+
 class Solution {
 public:
     int reverse(int x) {
