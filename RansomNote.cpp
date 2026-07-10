@@ -20,3 +20,6 @@ public:
         return true;
     }
 };
+
+
+//first we are counting the letters in the magazine ans then we are checking if the ransomNote can be formed using those letters. If any letter in the ransomNote is not available in the magazine, we return false. Otherwise, we return true after checking all letters.
