@@ -5,7 +5,7 @@ class Solution {
 public:
     int thirdMax(vector<int>& nums) {
 
-        long long fd = LLONG_MIN;xs
+        long long fd = LLONG_MIN;
         long long sd = LLONG_MIN;
         long long td = LLONG_MIN;
 
