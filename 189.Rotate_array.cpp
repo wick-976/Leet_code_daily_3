@@ -53,7 +53,39 @@ int main()
     return 0;
 }*/
 
+//optimal solution =>>
+/*
+#include <bits/stdc++.h>
+using namespace std;
 
+void reversal(int start,int end,vector<int>&nums)
+{
+    while(start<end)
+    {
+       swap(nums[start++],nums[end--]);
+    }
+}
+
+int main()
+{
+   vector<int>arr={1,2,3,4,5,6,7};
+   int size=arr.size();
+   int k;
+   cin>>k;
+   k=k%size;
+   int calc=size-k;
+   reversal(0,calc-1,arr);
+   reversal(calc,size-1,arr);
+   reversal(0,size-1,arr);
+   
+   
+   for(int x:arr)
+   {
+       cout<<x<<" ";
+   }
+   
+}
+*/
 
 
 //optimal solution =>>
