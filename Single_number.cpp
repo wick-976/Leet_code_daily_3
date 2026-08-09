@@ -20,3 +20,18 @@ public:
         return ans;
     }
 };
+
+
+//optimal solution using bit manipulation
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        
+        int size=nums.size();
+        int answer=nums[0];
+
+        for(int i=1;i<size;i++) answer=answer ^ nums[i];
+       
+        return answer;
+    }
+};
