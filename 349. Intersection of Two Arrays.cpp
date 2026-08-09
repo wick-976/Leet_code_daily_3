@@ -8,7 +8,7 @@ class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
         
-         map<int,int>ans;
+      map<int,int>ans;
 
        vector<int>answer;
 
