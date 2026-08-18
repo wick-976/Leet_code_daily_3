@@ -15,4 +15,4 @@ public:
     return false;
         
     }
-};// this is not a optimal solution, but it works. The optimal solution is to use logarithm to check if log3(n) is an integer.
+};// this is not a optimal solution, but it works anyway we wiil look for the optimal!!
