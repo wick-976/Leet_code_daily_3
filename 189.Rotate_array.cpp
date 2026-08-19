@@ -2,88 +2,51 @@
 /*#include <bits/stdc++.h>
 using namespace std;
 
-int main()
+vector<int>arra(vector<int> & arr,int k)
 {
-    vector<int> arr = {1, 2, 3, 4, 5, 6, 7};
 
-    int size = arr.size();
+    int size=arr.size();
+    k=k % size;
+    vector<int>temp;
 
-    // Check if the array is empty
-    if (arr.empty())
+    for(int i=size-k;i<size;i++)
     {
-        cout << "Array is empty!";
-        return 0;
+        temp.push_back(arr[i]);
     }
 
-    // Get the number of rotations
-    int k;
-    cout << "Enter the value of k: ";
-    cin >> k;
-
-    // Calculate effective rotations
-    k = k % size;
-
-    // Temporary array to store the last k elements
-    vector<int> temp_array;
-
-    for (int i = size - k; i < size; i++)
+    for(int i=size-k-1;i>=0;i--)
     {
-        temp_array.push_back(arr[i]);
+        arr[i+k]=arr[i];
     }
 
-    // Shift the remaining elements to the right
-    for (int i = size - k - 1; i >= 0; i--)
+    for(int i=0;i<k;i++)
     {
-        arr[i + k] = arr[i];
+        arr[i]=temp[i];
     }
 
-    // Copy the saved elements to the beginning
-    for (int i = 0; i < k; i++)
-    {
-        arr[i] = temp_array[i];
-    }
+    return arr;
 
-    // Print the rotated array
-    cout << "Rotated Array: ";
-    for (int x : arr)
-    {
-        cout << x << " ";
-    }
-
-    return 0;
-}*/
-
-//optimal solution =>>
-/*
-#include <bits/stdc++.h>
-using namespace std;
-
-void reversal(int start,int end,vector<int>&nums)
-{
-    while(start<end)
-    {
-       swap(nums[start++],nums[end--]);
-    }
 }
 
 int main()
 {
-   vector<int>arr={1,2,3,4,5,6,7};
-   int size=arr.size();
-   int k;
-   cin>>k;
-   k=k%size;
-   int calc=size-k;
-   reversal(0,calc-1,arr);
-   reversal(calc,size-1,arr);
-   reversal(0,size-1,arr);
-   
-   
-   for(int x:arr)
-   {
-       cout<<x<<" ";
-   }
-   
+    int size,k;
+    cin>>size>>k;
+
+    vector<int>arr(size);
+
+    for(int i=0;i<size;i++)
+    {
+        cin>>arr[i];
+    }
+
+    vector<int>result=arra(arr,k);
+
+    for(int x:result)
+    {
+        cout<<x<<" ";
+    }
+
 }
 */
 
