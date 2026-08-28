@@ -1,3 +1,5 @@
+//here we created the separeted variable for storiung the array and
+//then check the paliondome condition
 class Solution {
 public:
     bool isPalindrome(string s) {
