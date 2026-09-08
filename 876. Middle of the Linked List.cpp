@@ -13,7 +13,7 @@ public:
     ListNode* middleNode(ListNode* head) {
 
 
-        //brute force for this would be
+       /* //brute force for this would be
 
         ListNode* i=head;
 
@@ -26,6 +26,26 @@ public:
         }
 
         return arr[arr.size()/2];
+        */
+
+        //now we move to the optimal
+
+        ListNode* i=head;
+
+        int size=0;
+
+        while(i != NULL)
+        {
+            size++;
+            i=i->next;
+        }
+        i=head;
+        for(int j=0;j<size/2;j++)
+        {
+            i=i->next;
+        }
         
+
+    return i;
     }
 };
