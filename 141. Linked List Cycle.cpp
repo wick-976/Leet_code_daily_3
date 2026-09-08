@@ -33,3 +33,39 @@ public:
         
     }
 };
+
+"Optimal "
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+
+        ListNode* rabbit=head;
+        ListNode* tortoise=head;
+
+        while(rabbit != NULL && rabbit->next != NULL)
+        {
+            tortoise=tortoise->next;
+            rabbit=rabbit->next->next;
+
+            if(tortoise == rabbit) return true;
+        }
+
+    return false;
+        
+    }
+};
+
+
+"FOLLOW UP"
+
+"Consider:
+If you needed to find the exact starting node of the cycle, how would you adjust this two-pointer strategy?"
