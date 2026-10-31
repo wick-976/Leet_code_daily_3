@@ -19,3 +19,30 @@ public:
 
     }
 };
+
+
+//optimal solution 
+
+class Solution {
+public:
+    vector<int> findDisappearedNumbers(vector<int>& nums) {
+
+        vector<int> copy = nums;
+
+        for (int i = 0; i < nums.size(); i++) {
+            int index = abs(nums[i]) - 1;
+
+            if (copy[index] > 0)
+                copy[index] *= -1;
+        }
+
+        nums.clear();
+
+        for (int i = 0; i < copy.size(); i++) {
+            if (copy[i] > 0)
+                nums.push_back(i + 1);
+        }
+
+        return nums;
+    }
+};
